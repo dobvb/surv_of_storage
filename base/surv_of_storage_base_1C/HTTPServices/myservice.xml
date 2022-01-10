@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<HTTPService uuid="03c094bf-a38e-42fa-a47a-ba53fdd3ec3c">
+		<Properties>
+			<Name>myservice</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис по работе с хранилищем по http</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>myservice</RootURL>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="40192b35-a743-4796-980d-9c232bee8e9d">
+				<Properties>
+					<Name>bases</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Bases</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/bases/*</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="26cd81c7-0df7-42d7-aea7-f2c6ca59f8ad">
+						<Properties>
+							<Name>getlist</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Getlist</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>basesgetlist</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="7626ba9c-f984-44ba-aa37-ed5b10a95810">
+				<Properties>
+					<Name>meta</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Meta</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/meta/{idbase}/{idtype}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="5bcc8ad7-71d5-449a-88f1-d5bef759ea02">
+						<Properties>
+							<Name>getlist</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Getlist</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>metagetlist</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="01349707-4458-42a0-958e-a8cb5eb03037">
+				<Properties>
+					<Name>changes</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Changes</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/changes/{idbase}/{idmeta}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="da73b5f1-6424-42d2-a04f-5c7b9caaec7d">
+						<Properties>
+							<Name>getlist</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Getlist</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>changesgetlist</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="a7ac980f-6313-428e-8ef0-7537fd12c386">
+				<Properties>
+					<Name>repchanges</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Repchanges</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/repchanges/{idbase}/{firstdata}/{seconddata}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="a2b8d210-c926-4ed7-bb72-b49aabfa1276">
+						<Properties>
+							<Name>getlist</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Getlist</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>repchangesgetlist</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>
